@@ -53,12 +53,12 @@ bot.on('message', message=> {
     // Closes a ticket 
     if (message.content.startsWith(config.prefix + 'close')) {
         if (message.channel.parent.id == config.ticketParentChannel) {
-            config.blacklistedChannels.forEach(function(item) {
-		    if (!message.channel.id == item) {
-			   message.channel.delete();
-		}	    
-	    }
-        };
+            config.reactionEmotes.forEach(function(item) {
+                if (message.channel.id !== item) {
+                    message.channel.delete();
+                }
+            });
+        }
     };
     //
 	
