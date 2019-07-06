@@ -31,6 +31,8 @@ bot.on('message', message=> {
             // Doesn't allow anyone to view channel other than client & staff
             channel.overwritePermissions(message.guild.defaultRole.id, {VIEW_CHANNEL: false});
             channel.overwritePermissions(message.author.id, {VIEW_CHANNEL: true, SEND_MESSAGES: true});
+	    channel.overwritePermissions('519350702686994465', {VIEW_CHANNEL: true, SEND_MESSAGES: true});
+
             // Places channel into category
             channel.setParent(config.ticketCategory);
             // Message staff that a new ticket was made
@@ -42,7 +44,7 @@ bot.on('message', message=> {
                     return 'Undefined.'
                 }
             }
-            channel.send('<@&ROLEID> A new ticket was created by' + message.author + '! \nReason: ' + checkIfReason())
+            channel.send('<@&519350702686994465> A new ticket was created by' + message.author + '! \nReason: ' + checkIfReason())
         });
     };
     //
