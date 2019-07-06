@@ -60,7 +60,7 @@ bot.on('message', message=> {
 	
 	// Displays IP
 	if (message.content.startsWith(config.prefix + 'ip')) {
-		message.channel.send(message.author + ' the ip is `play.primalmoon.net`')
+		message.channel.send(message.author + ' the server ip is `play.primalmoon.net`')
 	}
     //
 	
