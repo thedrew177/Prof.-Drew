@@ -17,7 +17,7 @@ bot.on('message', message=> {
     
     // Show list of commands
     if (message.content.startsWith(config.prefix + 'help')) {
-        message.channel.send('```.help -- list of commands \n.ticket [reason] -- create a new ticket \n.close -- closes a ticket```')
+        message.channel.send('```*help -- list of commands \n*ticket [reason] -- create a new ticket \n*close -- closes a ticket \n*ip -- shows server ip```')
     };
     //
     
@@ -60,7 +60,7 @@ bot.on('message', message=> {
 	
 	// Displays IP
 	if (message.content.startsWith(config.prefix + 'ip')) {
-		message.channel.send(message.author + 'the ip is `play.primalmoon.net`')
+		message.channel.send(message.author + ' the ip is `play.primalmoon.net`')
 	}
     //
 	
