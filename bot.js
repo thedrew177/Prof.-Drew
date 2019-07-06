@@ -44,7 +44,7 @@ bot.on('message', message=> {
                     return 'Undefined.'
                 }
             }
-            channel.send('<@&519350702686994465> A new ticket was created by' + message.author + '! \nReason: ' + checkIfReason())
+            channel.send('<@&519350702686994465> A new ticket was created by ' + message.author + '! \nReason: ' + checkIfReason())
         });
     };
     //
