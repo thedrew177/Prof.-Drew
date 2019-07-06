@@ -54,7 +54,9 @@ bot.on('message', message=> {
     if (message.content.startsWith(config.prefix + 'close')) {
         if (message.channel.parent.id == config.ticketParentChannel) {
             config.reactionEmotes.forEach(function(item) {
-                if (message.channel.id !== item) {
+                if (message.channel.id == item) {
+                    return;
+                } else {
                     message.channel.delete();
                 }
             });
